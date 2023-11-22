@@ -47,13 +47,13 @@ a .navElement {
 	background-color: #005682;
 	color: white;
 }
-main {
+article {
 	/* TODO NO PERMITIR ELEMENTOS POR EL LADO IZQUIERDO */
 	clear: left;
 	/* TODO ancho 100% */
 	width: 100%;
 }
-main p {
+article p {
 	padding: 5px 10px;
 	text-align: justify;
 }
@@ -69,5 +69,8 @@ footer {
 
 .visited{
 	background-color: #005682;
-	color:white;
+	color: #FFFFFF;
+}
+a .visited{
+	color: #FFFFFF;
 }

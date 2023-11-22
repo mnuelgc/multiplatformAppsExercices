@@ -71,3 +71,7 @@ a .navElement {
 	background-color: #005682;
 	color:white;
 }
+
+a .visited{
+	color: #FFFFFF;
+}
