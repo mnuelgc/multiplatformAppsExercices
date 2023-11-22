@@ -1,73 +1,9 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Estructura con Divs</title>
-	<style type="text/css">
-		body { 
-			font-size: 10pt;
-			padding: 5px;
-		}
-		#header {
-			/* TODO NO PERMITIR ELEMENTOS POR EL LADO IZQUIERDO */
-			clear:left;
-			/* TODO ancho 100% */
-			width: 100%;
-
-			background-color: #005682;
-			margin-bottom: 5px;
-			padding: 10px 5px;
-			vertical-align: middle;
-			/* TODO TAMAÑO DE LETRA DE 16pt */
-			font-size: 16pt;
-			/* TODO COLOR BLANCO */
-			color: #FFFFFF;
-		}
-		#header img { 
-			padding: 1px 20px;
-			vertical-align: middle; 
-			width: 50px;
-		}
-		#nav {
-			/* TODO NO PERMITIR ELEMENTOS POR EL LADO IZQUIERDO */
-			clear:left;
-			/* TODO ancho 100% */
-			width: 100%;
-			text-transform:uppercase; 
-		}
-		.navElement {
-			float:left;
-			/* TODO COLOR DE FONDO #f0f0f0; */
-			background-color: #F0F0F0;
-			padding: 3px 10px;
-			margin-bottom: 5px;
-			margin-right:5px;
-		}
-		.navElement:hover {
-			/* TODO COLOR DE FONDO #005682; */
-			background-color: #005682;
-			color: white;
-		}
-		#content {
-			/* TODO NO PERMITIR ELEMENTOS POR EL LADO IZQUIERDO */
-			clear: left;
-			/* TODO ancho 100% */
-			width: 100%;
-		}
-		#content p {
-			padding: 5px 10px;
-			text-align: justify;
-		}
-		#footer {
-			/* TODO NO PERMITIR ELEMENTOS POR EL LADO IZQUIERDO */
-			clear: left;
-			/* TODO ancho 100% */
-			width: 100%;
-			background-color: #f0f0f0;
-			/* TODO COLOR gray; */
-			color: gray;
-		}
-	</style>
-</head>
+	<head>
+		<title>Estructura con Divs</title>
+		<link href="ejercicio2_css.css" rel="stylesheet" type="text/css" />
+	</head>
 	<body>
 
 	<!-- TODO ELEMENTO DIV DE CABECERA CON LOGOTIPO Y TEXTO -->
@@ -79,9 +15,9 @@
 	<!-- TODO BARRA DE NAVEGACION -->
 
 	<div id ="nav">
-		<div class ="navElement">Inicio</div>
-		<div class ="navElement">Contenidos</div>
-		<div class ="navElement">Profesorado</div>
+		<a href="./sesion01-ejercicio2.html"><div class ="navElement visited">Inicio</div></a>
+		<a href="./ejercicio2_contenidos.html"><div class ="navElement">Contenidos</div></a>
+		<a href="./ejercicio2_profesorado.html"><div class ="navElement">Profesorado</div></a>
 	</div>
 	<!-- TODO ELEMENTO DIV content -->
 	<div id ="content">
