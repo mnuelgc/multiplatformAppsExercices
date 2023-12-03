@@ -1,0 +1,35 @@
+.screenCont{
+    flex: 75%;
+    border: 1px solid black;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    overflow-x: scroll;
+}
+
+.screenTextView{
+    padding-left:25px;
+    padding-right:25px;
+}
+
+.calcContainer{
+    width: 50%;
+    height: 500px;
+    margin:auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.row{
+    flex:25%;
+    display: flex;
+    font-size: 2.5em;
+    flex-direction: row;
+}
+
+.row button{
+    flex: 25%;
+    font-size: 1em;
+    font-style: bold;
+}
