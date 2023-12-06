@@ -1,0 +1,30 @@
+
+header div{
+	background-color: blue;
+	color: white;
+	text-align: center;	
+}
+
+.content{
+	background-color: red;
+	height: 100%;
+	text-align: center;
+	font-size: 100px;
+	height: 300px;
+}
+
+footer{
+	background-color: lightgray;
+	height:50px;
+}
+
+.footer--1{
+	text-align: right;
+}
+.footer--2{
+	text-align: left;
+}
+
+.card{
+	/*margin: .15px; */
+}
