@@ -1,0 +1,78 @@
+div 
+{ 
+	outline:1px solid black;
+	font-weight: bolder;
+}
+
+header div {
+	background-color: lightgreen
+}
+
+.content{
+	background-color: red;
+	height: 100%;
+	text-align: center;
+	font-size: 100px;
+	height: 300px
+}
+
+.footer{
+	background-color: yellow
+}
+
+.footer--1{
+	text-align: right;
+}
+.footer--2{
+	text-align: left;
+}
+
+@media (max-width: 575px) { /*extra pequeñas*/
+    header div {
+		background-color: orange;
+		text-align: center;
+	}
+
+	.content{
+		height: 150px		
+	}
+
+	.content--1{
+		text-align: left;
+	}
+	.content--2{
+		text-align: center;
+		background-color: cyan;
+	}
+	.content--3{
+		text-align: right;
+	}
+
+	.footer{
+		text-align: center;
+	}
+}
+
+@media (min-width: 576px) and (max-width: 768px) { /*extra pequeñas*/
+    header div {
+		background-color: cyan;
+	}
+
+	.content{
+			height: 150px		
+	}
+	.content--1{
+		text-align: left;
+	}
+	.content--2{
+		text-align: right;
+	}
+	.content--3{
+		text-align: center;
+		background-color: lightgreen;
+	}
+
+	.footer{
+		text-align: center;
+	}
+}
