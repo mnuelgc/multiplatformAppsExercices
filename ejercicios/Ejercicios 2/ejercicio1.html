@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Calculadora Sencilla</title>
+		<link href="ejercicio1.css" rel="stylesheet" type="text/css" />
+	</head>
+	<body>
+
+		<header>
+			<p>Calculadora sencilla</p>
+		</header>
+		<main>
+
+		<form>
+			<p><label for ="op1">Operando 1:</label><input id="oper1" type="text" name="op1"></p>
+
+			<p><label for="op2"> Operando 2:</label> <input id="oper2" type="text" name="op2"></p>
+
+			<p>Resultado: <span id="result"></span></p>
+		</form>
+
+		<button onclick="suma()">Suma</button>
+		<button onclick="resta()">Resta</button>
+		<button onclick="multiplica()">Multiplicación</button>
+		<button onclick="divide()">División</button>
+
+		</main>
+
+		<script src="ejercicio1.js"></script>
+	</body>
+</html>
+
