@@ -1,0 +1,16 @@
+
+
+.carrousselContainer{
+	height: 250px
+}
+
+.carroussel-first{
+	background-image: url("./imgs/carone.png");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+
+.grayBack{
+	background-color: gray
+}
