@@ -4,9 +4,7 @@
   position: absolute;
   left: 0;
   right: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  padding : 1px;
+  padding : 15px;
 }
 
 #container strong {
@@ -25,4 +23,10 @@
 
 #container a {
   text-decoration: none;
+}
+
+ion-card{
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
 }
