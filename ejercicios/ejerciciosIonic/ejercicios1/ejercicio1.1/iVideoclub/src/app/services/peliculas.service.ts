@@ -51,7 +51,6 @@ export class PeliculasService {
         synopsis: "Acusado del asesinato de su mujer, Andrew Dufresne (Tim Robbins), tras ser condenado a cadena perpetua, es enviado a la cárcel de Shawshank. Con el paso de los años conseguirá ganarse la confianza del director del centro y el respeto de sus compañeros de prisión, especialmente de Red (Morgan Freeman), el jefe de la mafia de los sobornos."
       }
     ]
-
   }
 
   getPeliculas(){return this.peliculas}
