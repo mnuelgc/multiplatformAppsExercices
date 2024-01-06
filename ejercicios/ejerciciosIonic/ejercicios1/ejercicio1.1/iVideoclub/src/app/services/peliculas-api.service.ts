@@ -10,7 +10,9 @@ export class PeliculasAPIService {
 
   constructor(public http : HttpClient) { }
 
-  getPeliculas(){return this.http.get(this.APIep);}
+  getPeliculas(){
+    return this.http.get(this.APIep);
+  }
 
   getPelicula(id : number) : any {
     return this.http.get(this.APIep + '/' + id);

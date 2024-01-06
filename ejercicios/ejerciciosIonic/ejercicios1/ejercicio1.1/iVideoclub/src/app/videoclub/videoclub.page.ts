@@ -1,6 +1,6 @@
 import { ChangeDetectorRef, Component, OnDestroy, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { PeliculasService } from '../services/peliculas.service';
+import { PeliculasAPIService } from '../services/peliculas-api.service';
 
 @Component({
   selector: 'app-videoclub',
@@ -9,20 +9,20 @@ import { PeliculasService } from '../services/peliculas.service';
 })
 export class VideoclubPage implements OnInit, OnDestroy {
 
-  listaPeliculas : any[];
-  numFilms : number
+  listaPeliculas : any;
 
   modoLista = true;
 
-  constructor(private router : Router, private peliculas : PeliculasService) { 
-    this.listaPeliculas = peliculas.getPeliculas();
-
-    console.log(this.listaPeliculas);
-    console.log(this.listaPeliculas.length);
-
-    this.numFilms = this.listaPeliculas.length;
-    console.log(this.numFilms);
-
+  constructor(private router : Router, private peliculasAPIService : PeliculasAPIService) { 
+    
+    peliculasAPIService.getPeliculas().subscribe(
+      result => {
+        this.listaPeliculas = result;
+      },
+      err => {
+        console.log(err);
+      }
+    );
   }
 
   ngOnInit() {
