@@ -11,7 +11,7 @@ export class VideoclubPage implements OnInit, OnDestroy {
 
   listaPeliculas : any[];
 
-  modoLista = false;
+  modoLista = true;
 
   constructor(private router : Router, private peliculas : PeliculasService) { 
     this.listaPeliculas = peliculas.getPeliculas();
