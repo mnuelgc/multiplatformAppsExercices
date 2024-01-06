@@ -1,4 +1,5 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-videoclub',
@@ -7,7 +8,7 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 })
 export class VideoclubPage implements OnInit, OnDestroy {
 
-  constructor() { }
+  constructor(private router : Router) { }
 
   ngOnInit() {
     console.log ('OnInit VideoclubPage')
@@ -33,5 +34,10 @@ export class VideoclubPage implements OnInit, OnDestroy {
 
   ngOnDestroy() {
     console.log ('OnDestroy VideoclubPage')
+  }
+
+  seeFilm(id : number)
+  {
+    this.router.navigate(['/detalle', id])
   }
 }
