@@ -42,7 +42,7 @@
       <ng-template #modoGrid>
           <ion-grid>
           <ion-row>
-            <ion-col *ngFor ="let pelicula of listaPeliculas; index as id " size ="6 " size-sm ="4" size-md ="3">        
+            <ion-col *ngFor ="let pelicula of listaPeliculas; index as id " detail (click) ="seeFilm(id)" size ="6 " size-sm ="4" size-md ="3">        
               <ion-label>
                 <ion-img [src] ="pelicula.poster"></ion-img>
               </ion-label>
