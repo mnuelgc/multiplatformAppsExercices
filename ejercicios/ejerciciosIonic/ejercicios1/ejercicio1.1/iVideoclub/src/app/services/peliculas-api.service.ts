@@ -14,7 +14,7 @@ export class PeliculasAPIService {
     return this.http.get(this.APIep);
   }
 
-  getPelicula(id : number) : any {
+  getPelicula(id : number){
     return this.http.get(this.APIep + '/' + id);
   }
 

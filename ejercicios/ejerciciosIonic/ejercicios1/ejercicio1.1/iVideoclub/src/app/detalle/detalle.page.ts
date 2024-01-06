@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { PeliculasService } from '../services/peliculas.service';
+import { PeliculasAPIService } from '../services/peliculas-api.service';
 
 @Component({
   selector: 'app-detalle',
@@ -11,16 +11,23 @@ export class DetallePage implements OnInit {
 
   pelicula : any
 
-  peliculas :  PeliculasService
-  constructor(private activatedRoute : ActivatedRoute, peliculas : PeliculasService) {
-    this.peliculas = peliculas;
+  mPeliculasAPI :  PeliculasAPIService
+  constructor(private activatedRoute : ActivatedRoute, peliculasAPI : PeliculasAPIService) {
+    this.mPeliculasAPI = peliculasAPI;
    }
 
   ngOnInit() {
     const id = Number(this.activatedRoute.snapshot.paramMap.get('id'));
     console.log(id)
 
-    this.pelicula = this.peliculas.getPelicula(id);
+    this.mPeliculasAPI.getPelicula(id).subscribe(
+      result => {
+        this.pelicula = result;
+      },
+      err => {
+        console.log(err);
+      }
+    );
 
   }
 
