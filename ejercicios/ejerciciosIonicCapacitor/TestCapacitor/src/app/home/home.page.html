@@ -36,20 +36,41 @@
         <ion-item>Name: <span>{{deviceName}}</span></ion-item>
         <ion-item>Operating System: <span>{{operatingSystem}}</span></ion-item>
         <ion-item>OS version: <span>{{osVersion}}</span></ion-item>
-        <ion-item>Manufacturer <span>{{manufacturer}}</span></ion-item>
+        <ion-item>Manufacturer: <span>{{manufacturer}}</span></ion-item>
         <ion-item>Is virtual? <span>{{isVirtual}}</span></ion-item>
-        <ion-item>UUID <span>{{uuid}}</span></ion-item>
+        <ion-item>UUID: <span>{{uuid}}</span></ion-item>
       </ion-card-content>
     </ion-card>
 
     <ion-card>
       <ion-card-header>
-        <h2>Batery info</h2>
+        <h2>Batery info: </h2>
       </ion-card-header>
 
       <ion-card-content>
         <ion-item>Batery Level: <span>{{batteryLevel}}</span></ion-item>
         <ion-item>Is charging? <span>{{isCharging}}</span></ion-item>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card>
+      <ion-card-header>
+        <h2>Network info: </h2>
+      </ion-card-header>
+
+      <ion-card-content>
+        <ion-item>Is connected? <span> {{isConnected}}</span></ion-item>
+        <ion-item>Connection Type: <span> {{connectionType}}</span></ion-item>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card>
+      <ion-card-header>
+        <h2>Events log</h2>
+      </ion-card-header>
+
+      <ion-card-content>
+        
       </ion-card-content>
     </ion-card>
 
