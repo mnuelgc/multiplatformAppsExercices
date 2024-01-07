@@ -14,3 +14,28 @@
 .grayBack{
 	background-color: gray
 }
+
+
+.marginedTop{
+	margin-top: 50px;
+}
+
+.carrouselImgs{
+	background-size: contain;
+	background-position: center;
+	width: 100%;
+	height: 300px;
+}
+
+.carone{
+	background-image: url("./imgs/carone.png");
+}
+
+.cartwo{
+	background-image: url("./imgs/cartwo.png");
+	background-repeat: no-repeat;
+}
+
+.carthree{
+	background-image: url("./imgs/carthree.png");
+}
