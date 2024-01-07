@@ -70,7 +70,26 @@
       </ion-card-header>
 
       <ion-card-content>
-        
+        <ion-item *ngFor ="let event of eventList">
+          {{event}}
+        </ion-item>
+      </ion-card-content>
+    </ion-card>
+
+    
+    <ion-card>
+      <ion-card-header>
+        <h2>GPS Module</h2>
+      </ion-card-header>
+
+      <ion-card-content>
+        <ion-item>
+          Longitud -> {{longitude}}
+        </ion-item>
+
+        <ion-item>
+          Latitud -> {{latitude}}
+        </ion-item>
       </ion-card-content>
     </ion-card>
 
