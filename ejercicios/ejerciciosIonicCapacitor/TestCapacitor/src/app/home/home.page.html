@@ -1,0 +1,57 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Test Capacitor
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Test Capacitor</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div id="container">
+
+    <ion-card>
+      <ion-card-header>
+        <h2>Capacitor info</h2>
+      </ion-card-header>
+
+      <ion-card-content>
+        <ion-item>Platform name: <span>{{platformName}}</span></ion-item>
+        <ion-item>Native platform? <span>{{nativePlatform}}</span></ion-item>
+        <ion-item>Camera avaible? <span>{{cameraAvailable}}</span></ion-item>
+      </ion-card-content>
+    </ion-card>
+    
+    <ion-card>
+      <ion-card-header>
+        <h2>Device info</h2>
+      </ion-card-header>
+
+      <ion-card-content>
+        <ion-item>Name: <span>{{deviceName}}</span></ion-item>
+        <ion-item>Operating System: <span>{{operatingSystem}}</span></ion-item>
+        <ion-item>OS version: <span>{{osVersion}}</span></ion-item>
+        <ion-item>Manufacturer <span>{{manufacturer}}</span></ion-item>
+        <ion-item>Is virtual? <span>{{isVirtual}}</span></ion-item>
+        <ion-item>UUID <span>{{uuid}}</span></ion-item>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card>
+      <ion-card-header>
+        <h2>Batery info</h2>
+      </ion-card-header>
+
+      <ion-card-content>
+        <ion-item>Batery Level: <span>{{batteryLevel}}</span></ion-item>
+        <ion-item>Is charging? <span>{{isCharging}}</span></ion-item>
+      </ion-card-content>
+    </ion-card>
+
+  </div>
+</ion-content>
