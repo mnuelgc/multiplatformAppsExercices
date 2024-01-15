@@ -43,8 +43,12 @@
             }
         ?>
 
-        <a href ="#" class = "btn btn-warning fa-solid fa-pen-to-square">Editar Pelicula</a>
-        <a href ="#" class = "btn btn-light fa-caret-left">Volver al listado</a>
+
+        <a href ="{{ url('/catalog/edit/' . 0 ) }}" class = "btn btn-warning "> <span class ="fa-solid fa-pen-to-square"></span> Editar Pelicula</a>
+        <a href ="{{ url('/') }}" class = "btn btn-light"> <span class ="fa-solid fa-caret-left"></span>Volver al listado</a>
 
     </div>
-</div>@endsection
+</div>
+<script src="https://kit.fontawesome.com/d9d4402dc1.js" crossorigin="anonymous"></script>
+
+@endsection
