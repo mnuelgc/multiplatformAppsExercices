@@ -15,8 +15,8 @@ use App\Http\Controllers\CatalogController;
 |
 */
 
-Route::get('/', [HomeController::class, 'getHome']);
-
+Route::get('/', [HomeController::class, 'index']);
+/*
 Route::get('login', function () {
     return view('auth.login');
 });
@@ -24,10 +24,16 @@ Route::get('login', function () {
 Route::get('logout', function () {
     return "Logout usuario";
 });
+*/
+Route::group(['middleware' => 'auth'], function() {
+    Route::get('catalog', [CatalogController::class, 'getIndex']);
+    Route::get('catalog/show/{id}', [CatalogController::class, 'getShow']);
+    Route::get('catalog/create', [CatalogController::class, 'getCreate']);
+    Route::get('catalog/edit/{id}', [CatalogController::class, 'getEdit']);
+    Route::post('catalog/create', [CatalogController::class, 'postCreate']);
+    Route::put('catalog/edit/{id}', [CatalogController::class, 'putEdit']);
+});
 
+Auth::routes();
 
-Route::get('catalog', [CatalogController::class, 'getIndex']);
-Route::get('catalog/show/{id}', [CatalogController::class, 'getShow']);
-Route::get('catalog/create', [CatalogController::class, 'getCreate']);
-Route::get('catalog/edit/{id}', [CatalogController::class, 'getEdit']);
-
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

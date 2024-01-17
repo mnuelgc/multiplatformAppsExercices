@@ -5,7 +5,9 @@ namespace Database\Seeders;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
 use App\Models\Movie;
+use App\Models\User;
 
 
 class DatabaseSeeder extends Seeder
@@ -189,6 +191,9 @@ class DatabaseSeeder extends Seeder
         self::seedCatalog();
         $this->command->info('Tabla catálogo inicializada con datos!');
 
+
+        self::seedUsers();
+        $this->command->info('Tabla catálogo inicializada con datos!');
     }
 
     private function seedCatalog()
@@ -205,6 +210,27 @@ class DatabaseSeeder extends Seeder
             $p->synopsis = $pelicula['synopsis'];
             $p->save();
         }
+    }
 
+    private function seedUsers(){
+        DB::table('users')->delete();
+
+        $user = new User;
+        $user->name = "Peter";
+        $user->email = "peter@gimenez.com";
+        $user->password = Hash::make("1234");
+        $user->save();
+
+        $user2 = new User;
+        $user2->name = "Juan";
+        $user2->email = "juanr@gimenez.com";
+        $user2->password = Hash::make("1234");
+        $user2->save();
+
+        $user3 = new User;
+        $user3->name = "Fonsi";
+        $user3->email = "fonsi@gimenez.com";
+        $user3->password = Hash::make("1234");
+        $user3->save();
     }
 }
