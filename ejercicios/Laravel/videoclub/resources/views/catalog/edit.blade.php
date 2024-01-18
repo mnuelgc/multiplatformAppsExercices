@@ -12,7 +12,7 @@
          </div>
          <div class="card-body" style="padding:30px">
 
-            <form action = "{{action([App\Http\Controllers\CatalogController::class, 'getCreate'])}} " 
+            <form action = "{{url('/catalog/edit/' . $pelicula->id ) }} " 
                 method = "POST" >
                 @method ('PUT')
                 {{-- TODO: Abrir el formulario e indicar el método POST --}}
@@ -52,7 +52,7 @@
 
                 <div class="form-group text-center">
                 <button type="submit" class="btn btn-primary" style="padding:8px 100px;margin-top:25px;">
-                    Añadir película
+                    Editar película
                 </button>
                 </div>
 

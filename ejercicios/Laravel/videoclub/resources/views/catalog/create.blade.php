@@ -11,7 +11,7 @@
          </div>
          <div class="card-body" style="padding:30px">
 
-            <form action = "{{action([App\Http\Controllers\CatalogController::class, 'getCreate'])}} " 
+            <form action = "{{action([App\Http\Controllers\CatalogController::class, 'postCreate'])}} " 
                 method = "POST" >
                 {{-- TODO: Abrir el formulario e indicar el método POST --}}
                 @csrf
