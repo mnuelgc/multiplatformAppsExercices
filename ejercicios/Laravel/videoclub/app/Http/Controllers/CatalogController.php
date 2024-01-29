@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Models\Movie;
+use Alert;
 
 
 
@@ -42,6 +43,8 @@ class CatalogController extends Controller
         $movie->synopsis = $request->input('synopsis');
         $movie->save();
 
+        Alert::success('Guardado con éxito', 'La película se ha guardado con éxito');
+
         return redirect()->action([CatalogController::class, 'getIndex']);
     }
 
@@ -54,6 +57,33 @@ class CatalogController extends Controller
         $movie->synopsis = $request->input('synopsis');
         $movie->save();
         
+        Alert::success('Editado con éxito', 'La película se ha editado con éxito');
         return redirect()->action([CatalogController::class, 'getShow'], [$id]);
+    }
+
+    public function putRent(Request $request, $id){
+        $movie = Movie::findOrFail($id);
+        $movie->rented = true;
+        $movie->save();
+
+        Alert::success('Alquilada', 'La película se ha alquilado con éxito');
+        return redirect()->action([CatalogController::class, 'getShow'], [$id]);
+    }
+
+    public function putReturn(Request $request, $id){
+        $movie = Movie::findOrFail($id);
+        $movie->rented = false;
+        $movie->save();
+
+        Alert::success('Devuelta', 'La película se ha devuelto con éxito');
+        return redirect()->action([CatalogController::class, 'getShow'], [$id]);
+    }
+
+    public function deleteMovie(Request $request, $id){
+        $movie = Movie::findOrFail($id);
+        $movie->delete();
+
+        Alert::success('Película borrada', 'Película borrada con éxito');
+        return redirect()->action([CatalogController::class, 'getIndex']);
     }
 }

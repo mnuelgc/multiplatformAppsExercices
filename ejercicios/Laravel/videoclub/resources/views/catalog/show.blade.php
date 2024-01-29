@@ -28,25 +28,43 @@
         
         <p><strong>Resumen</strong> {{$pelicula->synopsis}}</p>
         
-        <?php
-            if($pelicula->rented)
-            {
-                echo "<p><strong>Estado</strong> Película actualmente alquilada </p>";
+        <?php if($pelicula->rented) : ?>
+   
 
-                echo "<a class ='btn btn-danger' href='#'>Devolver película </a>";
 
-            }
-            else{
-                echo "<p><strong>Estado</strong> Película disponible </p>";
-                echo "<a class ='btn btn-primary' href='#'>Alquilar </a>";
-
-            }
-        ?>
+            <p><strong>Estado</strong> Película actualmente alquilada </p>
+            <form action="{{route('returnFilm', ['id' => $pelicula->id])}}" 
+                method="POST" style="display:inline">
+                @method('PUT')
+                @csrf
+                <button type="submit" class="btn btn-danger" style="display:inline">
+                    Devolver película
+                </button>
+            </form>
+        <?php else : ?>
+            <p><strong>Estado</strong> Película disponible </p>
+            <form action="{{route('rentFilm', ['id' => $pelicula->id])}}" 
+                method="POST" style="display:inline">
+                @method('PUT')
+                @csrf
+                <button type="submit" class="btn btn-primary" style="display:inline">
+                    Alquilar
+                </button>
+            </form>
+        <?php endif; ?>
 
 
         <a href ="{{ url('/catalog/edit/' . $pelicula->id ) }}" class = "btn btn-warning "> <span class ="fa-solid fa-pen-to-square"></span> Editar Pelicula</a>
         <a href ="{{ url('/') }}" class = "btn btn-light"> <span class ="fa-solid fa-caret-left"></span>Volver al listado</a>
 
+        <form action="{{route('deleteFilm', ['id' => $pelicula->id])}}" 
+            method="POST" style="display:inline">
+            @method('DELETE')
+            @csrf
+            <button type="submit" class="btn btn-dark" style="display:inline">
+                Borrar película
+            </button>
+        </form>
     </div>
 </div>
 <script src="https://kit.fontawesome.com/d9d4402dc1.js" crossorigin="anonymous"></script>

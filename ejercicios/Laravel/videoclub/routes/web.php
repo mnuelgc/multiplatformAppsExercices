@@ -32,11 +32,11 @@ Route::group(['middleware' => 'auth'], function() {
     Route::get('catalog/edit/{id}', [CatalogController::class, 'getEdit']);
     Route::post('catalog/create', [CatalogController::class, 'postCreate']);
     Route::put('catalog/edit/{id}', [CatalogController::class, 'putEdit']);
+
+    Route::put('catalog/rent/{id}', [CatalogController::class, 'putRent'])->name('rentFilm');
+    Route::put('catalog/return/{id}', [CatalogController::class, 'putReturn'])->name('returnFilm');
+    Route::delete('catalog/delete/{id}', [CatalogController::class, 'deleteMovie'])->name('deleteFilm');
 });
-
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Auth::routes();
 
